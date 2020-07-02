@@ -57,18 +57,3 @@ def getGroundSpeed(windSpeed,windBearing,trueAirspeed,desiredBearing,correction,
                         trueAirspeed * windSpeed * m.cos(desiredBearing - windBearing + correction))
 
     return groundSpeed
-
-"""
-#Sample usage
-#All units must be the same. Here I have used m/s and degrees
-
-windSpeed = 10
-windBearing = 90
-trueAirSpeed = 15
-desiredBearing = 180
-
-bearing,correction = getCorrectedBearing(windSpeed,windBearing,trueAirSpeed,desiredBearing,True)
-groundSpeed = getGroundSpeed(windSpeed,windBearing,trueAirSpeed,desiredBearing,correction,True)
-
-print(f"Bearing: {bearing} degrees\nGround Speed: {groundSpeed}")
-"""
